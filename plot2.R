@@ -8,6 +8,7 @@ plot2 <- function(file = "household_power_consumption.txt"){
                      sep = ""))
       }
       require(plyr)
+      require(data.table)
       ## Load data: only take 2007-02-01 & 2007-02-02, take the "?" as 'NA'
       ## To avoid problems during loading, set colClasses first as character
       data <- fread(file, colClasses = "character", na.strings = "?")
